@@ -1,0 +1,35 @@
+{
+  "name": "inch-unfurl",
+  "version": "1.0.0",
+  "description": "Support functions for unfurling arrays",
+  "main": "unfurl.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/distributedlife/inch-unfurl.git"
+  },
+  "keywords": [
+    "inch",
+    "support",
+    "game",
+    "unfurl"
+  ],
+  "author": "Ryan Boucher",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/distributedlife/inch-unfurl/issues"
+  },
+  "homepage": "https://github.com/distributedlife/inch-unfurl",
+  "devDependencies": {
+    "expect": "^0.1.1",
+    "gulp": "^3.8.9",
+    "gulp-mocha": "^1.1.1",
+    "mocha": "^2.0.1",
+    "sinon": "^1.11.1"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1"
+  }
+}
