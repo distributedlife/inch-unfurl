@@ -1,6 +1,6 @@
 {
   "name": "inch-unfurl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Support functions for unfurling arrays",
   "main": "unfurl.js",
   "scripts": {
