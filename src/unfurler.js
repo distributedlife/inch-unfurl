@@ -1,3 +1,5 @@
+'use strict';
+
 var isArray = require('lodash').isArray;
 var each = require('lodash').each;
 

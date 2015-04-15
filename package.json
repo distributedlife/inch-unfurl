@@ -1,8 +1,8 @@
 {
-  "name": "unfurl",
+  "name": "unfurler",
   "version": "1.0.0",
   "description": "Support functions for unfurling arrays",
-  "main": "unfurl.js",
+  "main": "src/unfurler.js",
   "scripts": {
     "test": "gulp"
   },
