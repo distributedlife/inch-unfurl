@@ -1,13 +1,14 @@
-var _ = require('lodash');
+var isArray = require('lodash').isArray;
+var each = require('lodash').each;
 
 module.exports = {
 	array: function(arrayOfCallbacks) {
-		if (_.isArray(arrayOfCallbacks)) {
+		if (isArray(arrayOfCallbacks)) {
 			return function() {
-				_.each(arrayOfCallbacks, function(callback) {
+				each(arrayOfCallbacks, function(callback) {
 					callback();
 				});
-			}
+			};
 		} else {
 			return arrayOfCallbacks;
 		}
@@ -15,6 +16,6 @@ module.exports = {
 	arrayWithGuarantee: function(arrayOfCallbacks) {
 		var unfurled = this.array(arrayOfCallbacks);
 
-		return unfurled === undefined ? function() {} : unfurled;	
+		return unfurled === undefined ? function() {} : unfurled;
 	}
 };
