@@ -2,7 +2,6 @@
 
 var expect = require('expect');
 var sinon = require('sinon');
-var assert = require('assert');
 
 var unfurl = require('../src/unfurler');
 
@@ -20,8 +19,16 @@ describe('unfurling an array', function() {
 			var unfurled = unfurl.array([a, b]);
 			unfurled();
 
-			assert(a.called);
-			assert(b.called);
+			expect(a.called).toBe(true);
+			expect(b.called).toBe(true);
+		});
+
+		it('should pass all arguments through', function () {
+			var unfurled = unfurl.array([a, b]);
+			unfurled(1, 2, 3);
+
+			expect(a.firstCall.args).toEqual([1, 2, 3]);
+			expect(b.firstCall.args).toEqual([1, 2, 3]);
 		});
 	});
 
@@ -30,8 +37,15 @@ describe('unfurling an array', function() {
 			var unfurled = unfurl.array(a);
 			unfurled();
 
-			assert(a.called);
-			assert(!b.called);
+			expect(a.called).toBe(true);
+			expect(b.called).toBe(false);
+		});
+
+		it('should pass all arguments through', function () {
+			var unfurled = unfurl.array(a);
+			unfurled(1, 2);
+
+			expect(a.firstCall.args).toEqual([1, 2]);
 		});
 	});
 
@@ -40,8 +54,8 @@ describe('unfurling an array', function() {
 			var unfurled = unfurl.arrayWithGuarantee();
 			unfurled();
 
-			assert(!a.called);
-			assert(!b.called);
+			expect(a.called).toBe(false);
+			expect(b.called).toBe(false);
 		});
 	});
 
@@ -50,8 +64,8 @@ describe('unfurling an array', function() {
 			var unfurled = unfurl.array();
 			expect(unfurled).toBe(undefined);
 
-			assert(!a.called);
-			assert(!b.called);
+			expect(a.called).toBe(false);
+			expect(b.called).toBe(false);
 		});
 	});
 });
