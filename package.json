@@ -1,6 +1,6 @@
 {
   "name": "unfurler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Support functions for unfurling arrays",
   "main": "src/unfurler.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/distributedlife/unfurl.git"
+    "url": "https://github.com/distributedlife/unfurler.git"
   },
   "keywords": [
     "inch",
@@ -19,9 +19,9 @@
   "author": "Ryan Boucher",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/distributedlife/unfurl/issues"
+    "url": "https://github.com/distributedlife/unfurler/issues"
   },
-  "homepage": "https://github.com/distributedlife/unfurl",
+  "homepage": "https://github.com/distributedlife/unfurler",
   "devDependencies": {
     "expect": "^1.6.0",
     "gulp": "^3.8.11",
